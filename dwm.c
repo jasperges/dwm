@@ -963,10 +963,10 @@ focusmon(const Arg *arg)
 void
 focusstack(const Arg *arg)
 {
-    int i = stackpos(arg);
+	int i = stackpos(arg);
 	Client *c, *p;
 
-    if(i< 0)
+	if(i< 0)
 		return;
 
 	for(p = NULL, c = selmon->clients; c && (i || !ISVISIBLE(c));
@@ -2008,13 +2008,13 @@ tile(Monitor *m)
 			h = (m->wh - my - m->gappoh*oe - m->gappih*ie * (r - 1)) / r;
 			resize(c, m->wx + m->gappov*oe, m->wy + my, mw - (2*c->bw) - m->gappiv*ie, h - (2*c->bw), 0);
 			if (my + HEIGHT(c) < m->wh)
-                my += HEIGHT(c) + m->gappih*ie;
+				my += HEIGHT(c) + m->gappih*ie;
 		} else {
 			r = n - i;
 			h = (m->wh - ty - m->gappoh*oe - m->gappih*ie * (r - 1)) / r;
 			resize(c, m->wx + mw + m->gappov*oe, m->wy + ty, m->ww - mw - (2*c->bw) - 2*m->gappov*oe, h - (2*c->bw), 0);
 			if (ty + HEIGHT(c) < m->wh)
-                ty += HEIGHT(c) + m->gappih*ie;
+				ty += HEIGHT(c) + m->gappih*ie;
 		}
 }
 
@@ -2044,8 +2044,8 @@ togglefloating(const Arg *arg)
 void
 togglefullscr(const Arg *arg)
 {
-  if(selmon->sel)
-    setfullscreen(selmon->sel, !selmon->sel->isfullscreen);
+	if(selmon->sel)
+		setfullscreen(selmon->sel, !selmon->sel->isfullscreen);
 }
 
 void
@@ -2104,7 +2104,7 @@ unmanage(Client *c, int destroyed)
 		free(s->swallowing);
 		s->swallowing = NULL;
 		arrange(m);
-        focus(NULL);
+focus(NULL);
 		return;
 	}
 
@@ -2654,8 +2654,10 @@ main(int argc, char *argv[])
 #endif /* __OpenBSD__ */
 	scan();
 	run();
-    if(restart) execvp(argv[0], argv);
+	if(restart) execvp(argv[0], argv);
 	cleanup();
 	XCloseDisplay(dpy);
 	return EXIT_SUCCESS;
 }
+
+/* vim: set ts=4 sw=4 tw=0 noet :*/
