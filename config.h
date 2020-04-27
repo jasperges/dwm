@@ -40,56 +40,61 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class             instance      title                  tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",            NULL,         NULL,                       0,         1,          0,          0,         -1 },
-	{ "Firefox",         NULL,         NULL,                       1 << 8,    0,          0,          0,          0 },
-	{ "Mattermost",      NULL,         NULL,                       1 << 8,    0,          0,          0,          1 },
-	{ "TelegramDesktop", NULL,         NULL,                       1 << 8,    0,          0,          0,          1 },
-	{ "Franz",           NULL,         NULL,                       1 << 8,    0,          0,          0,          1 },
-	{ "Spotify",         NULL,         NULL,                       1 << 8,    0,          0,          0,          1 },
-	{ "st",              NULL,         NULL,                       0,         0,          1,          1,         -1 },
-	{ "alacritty",       NULL,         NULL,                       0,         0,          1,          1,         -1 },
-	{ "blender",         NULL,         NULL,                       0,         0,          0,          1,         -1 },
+	/* class             instance      title                       tags mask  isfloating  isterminal  noswallow  canfocus  monitor */
+	{ "Gimp",            NULL,         NULL,                       0,         1,          0,          0,         1,        -1 },
+	{ "Firefox",         NULL,         NULL,                       1 << 8,    0,          0,          0,         1,         0 },
+	{ "Mattermost",      NULL,         NULL,                       1 << 8,    0,          0,          0,         1,         1 },
+	{ "TelegramDesktop", NULL,         NULL,                       1 << 8,    0,          0,          0,         1,         1 },
+	{ "Franz",           NULL,         NULL,                       1 << 8,    0,          0,          0,         1,         1 },
+	{ "Spotify",         NULL,         NULL,                       1 << 8,    0,          0,          0,         1,         1 },
+	{ "st",              NULL,         NULL,                       0,         0,          1,          1,         1,        -1 },
+	{ "alacritty",       NULL,         NULL,                       0,         0,          1,          1,         1,        -1 },
+	{ "blender",         NULL,         NULL,                       0,         0,          0,          1,         1,        -1 },
 	/* Make apps floating */
 	/* Movie player */
-	{ "mpv",             NULL,         NULL,                       0,         1,          0,          0,         -1 },
+	{ "mpv",             NULL,         NULL,                       0,         1,          0,          0,         1,        -1 },
 	/* Terminal pinentry */
-	{ "alacritty",       NULL,         "pinentry",                 0,         1,          0,          0,         -1 },
+	{ "alacritty",       NULL,         "pinentry",                 0,         1,          0,          0,         1,        -1 },
 	/* Avalon/Allzpark */
-	{ "__main__.py",     NULL,         "Submarine Launcher",       0,         1,          0,          0,         -1 },
-	{ "blender",         NULL,         "Work Files",               0,         1,          0,          0,         -1 },
-	{ "maya",            NULL,         "Work Files",               0,         1,          0,          0,         -1 },
-	{ "blender",         NULL,         "Context Manager",          0,         1,          0,          0,         -1 },
-	{ "maya",            NULL,         "Context Manager",          0,         1,          0,          0,         -1 },
-	{ "blender",         NULL,         "Instance Creator",         0,         1,          0,          0,         -1 },
-	{ "maya",            NULL,         "Instance Creator",         0,         1,          0,          0,         -1 },
-	{ "blender",         NULL,         "Asset Loader",             0,         1,          0,          0,         -1 },
-	{ "maya",            NULL,         "Asset Loader",             0,         1,          0,          0,         -1 },
-	{ "blender",         NULL,         "Pyblish",                  0,         1,          0,          0,         -1 },
-	{ "maya",            NULL,         "Pyblish",                  0,         1,          0,          0,         -1 },
-	{ "blender",         NULL,         "Scene Inventory",          0,         1,          0,          0,         -1 },
-	{ "maya",            NULL,         "Scene Inventory",          0,         1,          0,          0,         -1 },
+	{ "__main__.py",     NULL,         "Submarine Launcher",       0,         1,          0,          0,         1,        -1 },
+	{ "blender",         NULL,         "Work Files",               0,         1,          0,          0,         1,        -1 },
+	{ "maya",            NULL,         "Work Files",               0,         1,          0,          0,         1,        -1 },
+	{ "blender",         NULL,         "Context Manager",          0,         1,          0,          0,         1,        -1 },
+	{ "maya",            NULL,         "Context Manager",          0,         1,          0,          0,         1,        -1 },
+	{ "blender",         NULL,         "Instance Creator",         0,         1,          0,          0,         1,        -1 },
+	{ "maya",            NULL,         "Instance Creator",         0,         1,          0,          0,         1,        -1 },
+	{ "blender",         NULL,         "Asset Loader",             0,         1,          0,          0,         1,        -1 },
+	{ "maya",            NULL,         "Asset Loader",             0,         1,          0,          0,         1,        -1 },
+	{ "blender",         NULL,         "Pyblish",                  0,         1,          0,          0,         1,        -1 },
+	{ "maya",            NULL,         "Pyblish",                  0,         1,          0,          0,         1,        -1 },
+	{ "blender",         NULL,         "Scene Inventory",          0,         1,          0,          0,         1,        -1 },
+	{ "maya",            NULL,         "Scene Inventory",          0,         1,          0,          0,         1,        -1 },
 	/* Shotgun */
-	{ "Shotgun",         NULL,         NULL,                       0,         1,          0,          0,         -1 },
+	{ "Shotgun",         NULL,         NULL,                       0,         1,          0,          0,         1,        -1 },
 	/* File managers */
-	{ "Thunar",          NULL,         NULL,                       0,         1,          0,          0,         -1 },
-	{ "Pcmanfm",         NULL,         NULL,                       0,         1,          0,          0,         -1 },
+	{ "Thunar",          NULL,         NULL,                       0,         1,          0,          0,         1,        -1 },
+	{ "Pcmanfm",         NULL,         NULL,                       0,         1,          0,          0,         1,        -1 },
 	 /* Blender */
-	{ "Blender",         NULL,         "Blender Preferences",      0,         1,          0,          0,         -1 },
-	{ "Blender",         NULL,         "Blender User Preferences", 0,         1,          0,          0,         -1 },
-	{ "Blender",         NULL,         "Blender Render",           0,         1,          0,          0,         -1 },
+	{ "Blender",         NULL,         "Blender Preferences",      0,         1,          0,          0,         1,        -1 },
+	{ "Blender",         NULL,         "Blender User Preferences", 0,         1,          0,          0,         1,        -1 },
+	{ "Blender",         NULL,         "Blender Render",           0,         1,          0,          0,         1,        -1 },
 	/* Maya */
-	{ "Maya",            NULL,         "JJM Playblast Window",     0,         1,          0,          0,         -1 },
+	{ "Maya",            NULL,         "JJM Playblast Window",     0,         1,          0,          0,         1,        -1 },
 	/* Bluetooth manager */
-	{ "Blueman-manager", NULL,         NULL,                       0,         1,          0,          0,         -1 },
+	{ "Blueman-manager", NULL,         NULL,                       0,         1,          0,          0,         1,        -1 },
 	/* Steam */
-	{ "Steam",           NULL,         NULL,                       0,         1,          0,          0,         -1 },
+	{ "Steam",           NULL,         NULL,                       0,         1,          0,          0,         1,        -1 },
 	/* Music player */
-	{ "alacritty",       NULL,         "ncmpcpp",                  0,         1,          0,          0,         -1 },
+	{ "alacritty",       NULL,         "ncmpcpp",                  0,         1,          0,          0,         1,        -1 },
 	/* Volume control */
-	{ "alacritty",       NULL,         "pulsemixer",               0,         1,          0,          0,         -1 },
+	{ "alacritty",       NULL,         "pulsemixer",               0,         1,          0,          0,         1,        -1 },
 	/* Email */
-	{ "alacritty",       NULL,         "neomutt",                  0,         1,          0,          0,         -1 },
+	{ "alacritty",       NULL,         "neomutt",                  0,         1,          0,          0,         1,        -1 },
+	{ "Protonmail Bridge", NULL,       NULL,                       0,         1,          0,          0,         1,        -1 },
+	/* Syncthing */
+	{ "Syncthing GTK",   NULL,         NULL,                       0,         1,          0,          0,         1,        -1 },
+	/* No focus */
+	{ "trayer",          NULL,         NULL,                       0,         0,          0,          1,         0,        -1 },
 };
 
 /* layout(s) */
