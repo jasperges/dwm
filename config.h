@@ -10,8 +10,8 @@ static const unsigned int gappov      = 0;        /* vert outer gap between wind
 static const int smartgaps            = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar              = 1;        /* 0 means no bar */
 static const int topbar               = 1;        /* 0 means bottom bar */
-static const int horizpadbar          = 0;        /* horizontal padding for statusbar */
-static const int vertpadbar           = 0;        /* vertical padding for statusbar */
+static const int horizpadbar          = 8;        /* horizontal padding for statusbar */
+static const int vertpadbar           = 8;        /* vertical padding for statusbar */
 static const char *fonts[]            = { "Ubuntu Nerd Font:size=11:antialias=true" };
 static const char dmenufont[]         = "Ubuntu Nerd Font:size=11:antialias=true";
 static const char col_gray1[]         = "#222222";
