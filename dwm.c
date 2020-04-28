@@ -2153,6 +2153,7 @@ tagswapmon(const Arg *arg)
 			setfullscreen(c, 0);
 			setfullscreen(c, 1);
 		}
+		setfocus(c);
 	}
 
 	focus(NULL);
