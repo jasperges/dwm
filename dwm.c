@@ -159,6 +159,7 @@ typedef struct {
 	const char *title;
 	unsigned int tags;
 	int iscentered;
+	int floatw, floath;
 	int isfloating;
 	int isterminal;
 	int noswallow;
@@ -367,6 +368,14 @@ applyrules(Client *c)
 			c->isfloating = r->isfloating;
             c->canfocus = r->canfocus;
 			c->tags |= r->tags;
+			if (r->isfloating) {
+				if (r->floatw >= 0) {
+					c->w = r->floatw;
+				}
+				if (r->floath >= 0) {
+					c->h = r->floath;
+			    }
+			}
 			for (m = mons; m && m->num != r->monitor; m = m->next);
 			if (m)
 				c->mon = m;
