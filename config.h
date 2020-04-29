@@ -75,9 +75,9 @@ static const Rule rules[] = {
 	{ "Thunar",          NULL,         NULL,                       0,         1,          -1, -1,       1,          0,          0,         1,        -1 },
 	{ "Pcmanfm",         NULL,         NULL,                       0,         1,          -1, -1,       1,          0,          0,         1,        -1 },
 	 /* Blender */
-	{ "Blender",         NULL,         "Blender Preferences",      0,         1,          -1, -1,       1,          0,          0,         1,        -1 },
-	{ "Blender",         NULL,         "Blender User Preferences", 0,         1,          -1, -1,       1,          0,          0,         1,        -1 },
-	{ "Blender",         NULL,         "Blender Render",           0,         1,          -1, -1,       1,          0,          0,         1,        -1 },
+	{ "Blender",         NULL,         "Blender Preferences",      0,         1,          -1, -1,       1,          0,          1,         1,        -1 },
+	{ "Blender",         NULL,         "Blender User Preferences", 0,         1,          -1, -1,       1,          0,          1,         1,        -1 },
+	{ "Blender",         NULL,         "Blender Render",           0,         1,          -1, -1,       1,          0,          1,         1,        -1 },
 	/* Maya */
 	{ "Maya",            NULL,         "JJM Playblast Window",     0,         1,          -1, -1,       1,          0,          0,         1,        -1 },
 	/* Bluetooth manager */
