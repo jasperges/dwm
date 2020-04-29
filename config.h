@@ -12,6 +12,8 @@ static const int showbar              = 1;        /* 0 means no bar */
 static const int topbar               = 1;        /* 0 means bottom bar */
 static const int horizpadbar          = 8;        /* horizontal padding for statusbar */
 static const int vertpadbar           = 8;        /* vertical padding for statusbar */
+static const int pertag               = 1;        /* 0 means global layout across all tags (default), 1 = layout per tag (pertag) */
+static const int pertagbar            = 0;        /* 0 means using pertag, but with the same barpos, 1 = normal pertag */
 static const char *fonts[]            = { "Ubuntu Nerd Font:size=11:antialias=true" };
 static const char dmenufont[]         = "Ubuntu Nerd Font:size=11:antialias=true";
 static const char col_gray1[]         = "#222222";
