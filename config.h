@@ -142,7 +142,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	/* { MODKEY,                       XK_p,      spawn,             {.v = dmenucmd } }, */
 	{ MODKEY,                       XK_Return, spawn,             {.v = termcmd } },
-	{ MODKEY,                       XK_b,      togglebar,         {0} },
+	{ MODKEY|ShiftMask,             XK_b,      togglebar,         {0} },
 	STACKKEYS(MODKEY,                          focus)
 	STACKKEYS(MODKEY|ShiftMask,                push)
 	{ MODKEY,                       XK_comma,  incnmaster,        {.i = +1 } },
