@@ -357,6 +357,7 @@ applyrules(Client *c)
 		&& (!r->instance || strstr(instance, r->instance)))
 		{
 			c->isterminal = r->isterminal;
+			c->noswallow = r->noswallow;
 			c->iscentered = r->iscentered;
 			c->isfloating = r->isfloating;
             c->canfocus = r->canfocus;
