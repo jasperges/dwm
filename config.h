@@ -85,11 +85,11 @@ static const Rule rules[] = {
 	/* Steam */
 	{ "Steam",           NULL,         NULL,                       0,         1,          -1, -1,       1,          0,          0,         1,        -1 },
 	/* Music player */
-	{ "alacritty",       NULL,         "ncmpcpp",                  0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
+	{ "alacritty",       NULL,         "ncmpcpp",                  0,         1,          1400, 900,    1,          0,          0,         1,        -1 },
 	/* Volume control */
-	{ "alacritty",       NULL,         "pulsemixer",               0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
+	{ "alacritty",       NULL,         "pulsemixer",               0,         1,          1400, 900,    1,          0,          0,         1,        -1 },
 	/* Email */
-	{ "alacritty",       NULL,         "neomutt",                  0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
+	{ "alacritty",       NULL,         "neomutt",                  0,         1,          1400, 900,    1,          0,          0,         1,        -1 },
 	{ "Protonmail Bridge", NULL,       NULL,                       0,         1,          -1, -1,       1,          0,          0,         1,        -1 },
 	/* Syncthing */
 	{ "Syncthing GTK",   NULL,         NULL,                       0,         1,          -1, -1,       1,          0,          0,         1,        -1 },
