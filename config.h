@@ -34,6 +34,7 @@ static const unsigned int alphas[][3]      = {
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+/* static const char *tags[] = { "", "", "", "", "", "", "", "", "" }; */
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -90,6 +91,8 @@ static const Rule rules[] = {
 	{ "alacritty",       NULL,         "pulsemixer",               0,         1,          1400, 900,    1,          0,          0,         1,        -1 },
 	/* Email */
 	{ "alacritty",       NULL,         "neomutt",                  0,         1,          1400, 900,    1,          0,          0,         1,        -1 },
+	/* Bashtop */
+	{ "alacritty",       NULL,         "bashtop",                  0,         1,          1400, 900,    1,          0,          0,         1,        -1 },
 	{ "Protonmail Bridge", NULL,       NULL,                       0,         1,          -1, -1,       1,          0,          0,         1,        -1 },
 	/* Syncthing */
 	{ "Syncthing GTK",   NULL,         NULL,                       0,         1,          -1, -1,       1,          0,          0,         1,        -1 },
