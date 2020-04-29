@@ -103,11 +103,15 @@ static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static int attachbelow       = 1;    /* 1 means attach after the currently active window */
 
+#include "layouts.c"
+
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
+	{ "TTT",      bstack },
+	{ "===",      bstackhoriz },
 };
 
 /* key definitions */
@@ -145,6 +149,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, incnmaster,        {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,          {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,          {.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_h,      setcfact,          {.f = +0.25} },
+	{ MODKEY|ShiftMask,             XK_l,      setcfact,          {.f = -0.25} },
+	{ MODKEY|ShiftMask,             XK_o,      setcfact,          {.f =  0.00} },
 	{ MODKEY|Mod1Mask,              XK_h,      incrgaps,          {.i = +1 } },
 	{ MODKEY|Mod1Mask,              XK_l,      incrgaps,          {.i = -1 } },
 	{ MODKEY|Mod1Mask|ControlMask,  XK_h,      incrigaps,         {.i = +1 } },
@@ -152,16 +159,19 @@ static Key keys[] = {
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_h,      incrogaps,         {.i = +1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_l,      incrogaps,         {.i = -1 } },
 	{ MODKEY|Mod1Mask,              XK_0,      togglegaps,        {0} },
+	{ MODKEY|Mod1Mask|ShiftMask,    XK_0,      defaultgaps,       {0} },
 	{ MODKEY|Mod1Mask,              XK_Return, toggleAttachBelow, {0} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,              {0} },
 	{ MODKEY,                       XK_Tab,    view,              {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,        {0} },
 	{ MODKEY,                       XK_t,      setlayout,         {.v = &layouts[0]} },
-	/* { MODKEY,                       XK_f,      setlayout,         {.v = &layouts[1]} }, */
-	{ MODKEY,                       XK_f,      togglefullscr,     {0} },
+	{ MODKEY|ShiftMask,             XK_f,      setlayout,         {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,         {.v = &layouts[2]} },
+	{ MODKEY,                       XK_e,      setlayout,         {.v = &layouts[3]} }, // bstack layout
+	{ MODKEY,                       XK_r,      setlayout,         {.v = &layouts[4]} }, // bstackhoriz layout
 	{ MODKEY|ControlMask,           XK_space,  setlayout,         {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating,    {0} },
+	{ MODKEY,                       XK_f,      togglefullscr,     {0} },
 	{ MODKEY,                       XK_0,      view,              {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,               {.ui = ~0 } },
 	{ MODKEY|ControlMask,           XK_comma,  focusmon,          {.i = -1 } },
