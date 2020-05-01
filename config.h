@@ -98,9 +98,10 @@ static const Rule rules[] = {
 	{ "alacritty",          NULL,     "pulsemixer",          0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
 	/* Email */
 	{ "alacritty",          NULL,     "neomutt",             0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
-	/* Bashtop */
+	/* Bash/Htop */
 	{ "alacritty",          NULL,     "bashtop",             0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
-	{ "Protonmail Bridge",  NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
+	{ "alacritty",          NULL,     "htop",                0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
+	{ "ProtonMail Bridge",  "protonmail-bridge", NULL,       0,         1,          785,  530,  1,          0,          0,         1,        -1 },
 	/* Syncthing */
 	{ "Syncthing GTK",      NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
 	/* No focus */
