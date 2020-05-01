@@ -52,6 +52,7 @@ static const Rule rules[] = {
 	{ "Firefox",         NULL,         NULL,                       1 << 8,    0,          -1, -1,       0,          0,          0,         1,         0 },
 	{ "Mattermost",      NULL,         NULL,                       1 << 8,    0,          -1, -1,       0,          0,          0,         1,         1 },
 	{ "TelegramDesktop", NULL,         NULL,                       1 << 8,    0,          -1, -1,       0,          0,          0,         1,         1 },
+	{ "Rambox",          NULL,         NULL,                       1 << 8,    0,          -1, -1,       0,          0,          0,         1,         1 },
 	{ "Franz",           NULL,         NULL,                       1 << 8,    0,          -1, -1,       0,          0,          0,         1,         1 },
 	{ "Spotify",         NULL,         NULL,                       1 << 8,    0,          -1, -1,       0,          0,          0,         1,         1 },
 	{ "st",              NULL,         NULL,                       0,         0,          -1, -1,       0,          1,          1,         1,        -1 },
