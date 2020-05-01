@@ -58,6 +58,8 @@ static const Rule rules[] = {
 	{ "st",              NULL,         NULL,                       0,         0,          -1, -1,       0,          1,          1,         1,        -1 },
 	{ "alacritty",       NULL,         NULL,                       0,         0,          -1, -1,       0,          1,          1,         1,        -1 },
 	{ "Blender",         NULL,         NULL,                       0,         0,          -1, -1,       0,          0,          1,         1,        -1 },
+	{ "TelegramDesktop",    NULL,     "Telegram",            1 << 8,    0,          -1, -1,     0,          0,          0,         1,         1 },
+	{ "TelegramDesktop",    NULL,     "Media viewer",        0,         0,          -1, -1,     0,          0,          0,         1,        -1 },
 	/* Make apps floating */
 	/* Movie player */
 	{ "mpv",             NULL,         NULL,                       0,         1,          -1, -1,       1,          0,          0,         1,        -1 },
