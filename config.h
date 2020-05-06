@@ -87,6 +87,7 @@ static const Rule rules[] = {
 	{ "Blender",            NULL,     "Preferences",         0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
 	{ "Blender",            NULL,     "Render",              0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
 	/* Maya */
+	{ "Maya",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         1,        -1 },
 	{ "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
 	/* Bluetooth manager */
 	{ "Blueman-manager",    NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
