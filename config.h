@@ -39,7 +39,8 @@ static const unsigned int alphas[][3]      = {
 #define MAX_TAGNAME_LEN 14      /* excludes TAG_PREPEND */
 #define TAG_PREPEND "%1i:"      /* formatted as 2 chars */
 #define MAX_TAGLEN 16           /* altogether */
-static char tags[][MAX_TAGLEN] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static char tags[][MAX_TAGLEN] = { "1", "2", "3", "4", "5", "6", "7", "", "" };
+/* static char tags[][MAX_TAGLEN] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; */
 /* static const char *tags[] = { "", "", "", "", "", "", "", "", "" }; */
 
 static const Rule rules[] = {
@@ -50,12 +51,12 @@ static const Rule rules[] = {
 	/* class                instance  title                  tags mask  iscentered  float w, h  isfloating  isterminal  noswallow  canfocus  monitor */
 	{ "Gimp",               NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
 	{ "Firefox",            NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,         1,         0 },
-	{ "Mattermost",         NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,         1,         1 },
-	{ "TelegramDesktop",    NULL,     "Telegram",            1 << 8,    0,          -1, -1,     0,          0,          0,         1,         1 },
+	{ "Mattermost",         NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,         1,         1 },
+	{ "TelegramDesktop",    NULL,     "Telegram",            1 << 7,    0,          -1, -1,     0,          0,          0,         1,         1 },
 	{ "TelegramDesktop",    NULL,     "Media viewer",        0,         0,          -1, -1,     0,          0,          0,         1,        -1 },
-	{ "Rambox",             NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,         1,         1 },
-	{ "Franz",              NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,         1,         1 },
-	{ "Spotify",            NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,         1,         1 },
+	{ "Rambox",             NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,         1,         1 },
+	{ "Franz",              NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,         1,         1 },
+	{ "Spotify",            NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,         1,         1 },
 	{ "st",                 NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          1,         1,        -1 },
 	{ "alacritty",          NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          1,         1,        -1 },
 	{ "Blender",            NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         1,        -1 },
@@ -65,21 +66,21 @@ static const Rule rules[] = {
 	/* Terminal pinentry */
 	{ "alacritty",          NULL,     "pinentry",            0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
 	/* Avalon/Allzpark */
-	{ "__main__.py",        NULL,     "Submarine Launcher",  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
-	{ "blender",            NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
-	{ "maya",               NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
-	{ "blender",            NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
-	{ "maya",               NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
-	{ "blender",            NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
-	{ "maya",               NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
-	{ "blender",            NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
-	{ "maya",               NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
-	{ "blender",            NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
-	{ "maya",               NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
-	{ "blender",            NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
-	{ "maya",               NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
+	{ "__main__.py",        NULL,     "Submarine Launcher",  0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
+	{ "blender",            NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
+	{ "maya",               NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
+	{ "blender",            NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
+	{ "maya",               NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
+	{ "blender",            NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
+	{ "maya",               NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
+	{ "blender",            NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
+	{ "maya",               NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
+	{ "blender",            NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
+	{ "maya",               NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
+	{ "blender",            NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
+	{ "maya",               NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
 	/* Shotgun */
-	{ "Shotgun",            NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
+	{ "Shotgun",            NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
 	/* File managers */
 	{ "Thunar",             NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
 	{ "Pcmanfm",            NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
@@ -88,7 +89,7 @@ static const Rule rules[] = {
 	{ "Blender",            NULL,     "Render",              0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
 	/* Maya */
 	{ "Maya",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         1,        -1 },
-	{ "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
+	{ "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
 	/* Bluetooth manager */
 	{ "Blueman-manager",    NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
 	/* Steam */
@@ -106,7 +107,7 @@ static const Rule rules[] = {
 	/* Syncthing */
 	{ "Syncthing GTK",      NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
 	/* No focus */
-	{ "trayer",             NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         0,        -1 },
+	{ "trayer",             NULL,     NULL,                 ~0,         0,          -1, -1,     0,          0,          1,         0,        -1 },
 };
 
 /* layout(s) */
