@@ -94,15 +94,8 @@ static const Rule rules[] = {
 	{ "Blueman-manager",    NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
 	/* Steam */
 	{ "Steam",              NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
-	/* Music player */
-	{ "alacritty",          NULL,     "ncmpcpp",             0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
-	/* Volume control */
-	{ "alacritty",          NULL,     "pulsemixer",          0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
-	/* Email */
-	{ "alacritty",          NULL,     "neomutt",             0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
 	/* Bash/Htop */
-	{ "alacritty",          NULL,     "bashtop",             0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
-	{ "alacritty",          NULL,     "htop",                0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
+	{ "alacritty",          NULL,     "centered",          0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
 	{ "ProtonMail Bridge",  "protonmail-bridge", NULL,       0,         1,          785,  530,  1,          0,          0,         1,        -1 },
 	/* Syncthing */
 	{ "Syncthing GTK",      NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
