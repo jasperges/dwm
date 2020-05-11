@@ -104,7 +104,7 @@ struct Client {
 	int basew, baseh, incw, inch, maxw, maxh, minw, minh;
 	int bw, oldbw;
 	unsigned int tags;
-	int isfixed, iscentered, isfloating, canfocus, isurgent, neverfocus, oldstate, isfullscreen, isterminal, noswallow;
+	int isfixed, iscentered, isfloating, isurgent, neverfocus, oldstate, isfullscreen, isterminal, noswallow;
 	pid_t pid;
 	Client *next;
 	Client *snext;
@@ -167,7 +167,6 @@ typedef struct {
 	int isfloating;
 	int isterminal;
 	int noswallow;
-    int canfocus;
 	int monitor;
 } Rule;
 
@@ -364,7 +363,6 @@ applyrules(Client *c)
 	/* rule matching */
 	c->iscentered = 0;
 	c->isfloating = 0;
-    c->canfocus = 1;
 	c->tags = 0;
 	XGetClassHint(dpy, c->win, &ch);
 	class    = ch.res_class ? ch.res_class : broken;
@@ -380,7 +378,6 @@ applyrules(Client *c)
 			c->noswallow = r->noswallow;
 			c->iscentered = r->iscentered;
 			c->isfloating = r->isfloating;
-            c->canfocus = r->canfocus;
 			c->tags |= r->tags;
 			if (r->isfloating) {
 				if (r->floatw >= 0) {
@@ -1011,8 +1008,6 @@ focus(Client *c)
 	if (selmon->sel && selmon->sel != c)
 		unfocus(selmon->sel, 0);
 	if (c) {
-        if (!c->canfocus)
-            return;
 		if (c->mon != selmon)
 			selmon = c->mon;
 		if (c->isurgent)
@@ -1063,8 +1058,8 @@ focusstack(const Arg *arg)
 	if(i< 0)
 		return;
 
-	for(p = NULL, c = selmon->clients; c && (i || !ISVISIBLE(c) || !c->canfocus);
-	    i -= (ISVISIBLE(c) && c->canfocus) ? 1 : 0, p = c, c = c->next);
+	for(p = NULL, c = selmon->clients; c && (i || !ISVISIBLE(c));
+	    i -= ISVISIBLE(c) ? 1 : 0, p = c, c = c->next);
 	focus(c ? c : p);
 	restack(selmon);
 }
