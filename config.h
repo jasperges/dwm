@@ -90,12 +90,13 @@ static const Rule rules[] = {
 	/* Maya */
 	{ "Maya",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         1,        -1 },
 	{ "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          1,         1,        -1 },
+	{ "Maya",               NULL,     "Script Editor",       0,         1,         1400, 900,   1,          0,          1,         1,        -1 },
 	/* Bluetooth manager */
 	{ "Blueman-manager",    NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
 	/* Steam */
 	{ "Steam",              NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
 	/* Bash/Htop */
-	{ "alacritty",          NULL,     "centered",          0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
+	{ "alacritty",          NULL,     "centered",            0,         1,          1400, 900,  1,          0,          0,         1,        -1 },
 	{ "ProtonMail Bridge",  "protonmail-bridge", NULL,       0,         1,          785,  530,  1,          0,          0,         1,        -1 },
 	/* Syncthing */
 	{ "Syncthing GTK",      NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         1,        -1 },
