@@ -67,18 +67,6 @@ static const Rule rules[] = {
 	{ "alacritty",          NULL,     "pinentry",            0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Avalon/Allzpark */
 	{ "__main__.py",        NULL,     "Submarine Launcher",  0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "blender",            NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "maya",               NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "blender",            NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "maya",               NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "blender",            NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "maya",               NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "blender",            NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "maya",               NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "blender",            NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "maya",               NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "blender",            NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "maya",               NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          1,         -1 },
 	/* Shotgun */
 	{ "Shotgun",            NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          1,         -1 },
 	/* File managers */
@@ -87,10 +75,22 @@ static const Rule rules[] = {
 	 /* Blender */
 	{ "Blender",            NULL,     "Preferences",         0,         1,          -1, -1,     1,          0,          1,         -1 },
 	{ "Blender",            NULL,     "Render",              0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Blender",            NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Blender",            NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Blender",            NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Blender",            NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Blender",            NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Blender",            NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          1,         -1 },
 	/* Maya */
 	{ "Maya",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         -1 },
 	{ "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          1,         -1 },
 	{ "Maya",               NULL,     "Script Editor",       0,         1,         1400, 900,   1,          0,          1,         -1 },
+	{ "Maya",               NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Maya",               NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Maya",               NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Maya",               NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Maya",               NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Maya",               NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          1,         -1 },
 	/* Bluetooth manager */
 	{ "Blueman-manager",    NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Steam */
