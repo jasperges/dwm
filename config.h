@@ -75,12 +75,12 @@ static const Rule rules[] = {
 	 /* Blender */
 	{ "Blender",            NULL,     "Preferences",         0,         1,          -1, -1,     1,          0,          1,         -1 },
 	{ "Blender",            NULL,     "Render",              0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Blender",            NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Blender",            NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Blender",            NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Blender",            NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Blender",            NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Blender",            NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "blender",            NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "blender",            NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "blender",            NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "blender",            NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "blender",            NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "blender",            NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          1,         -1 },
 	/* Maya */
 	{ "Maya",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         -1 },
 	{ "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          1,         -1 },
