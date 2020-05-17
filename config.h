@@ -48,7 +48,7 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class                instance  title                  tags mask  iscentered  float w, h  isfloating  isterminal  noswallow  monitor */
+	/* class                instance  title                  tags mask  iscentered  float w, h  isfloating  isterminal  doswallow  monitor */
 	{ "Gimp",               NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Firefox",            NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,          0 },
 	{ "Mattermost",         NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
@@ -57,42 +57,42 @@ static const Rule rules[] = {
 	{ "Rambox",             NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "Franz",              NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "Spotify",            NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
-	{ "st",                 NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          1,         -1 },
-	{ "alacritty",          NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          1,         -1 },
-	{ "Blender",            NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         -1 },
+	{ "st",                 NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          0,         -1 },
+	{ "alacritty",          NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          0,         -1 },
+	{ "Blender",            NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          0,         -1 },
 	/* Make apps floating */
 	/* Movie player */
 	{ "mpv",                NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Terminal pinentry */
 	{ "alacritty",          NULL,     "pinentry",            0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Avalon/Allzpark */
-	{ "__main__.py",        NULL,     "Submarine Launcher",  0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "__main__.py",        NULL,     "Submarine Launcher",  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Shotgun */
-	{ "Shotgun",            NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Shotgun",            NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* File managers */
 	{ "Thunar",             NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Pcmanfm",            NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	 /* Blender */
-	{ "Blender",            NULL,     "Blender Preferences", 0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Blender",            NULL,     "Render",              0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "blender",            NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "blender",            NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "blender",            NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "blender",            NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "blender",            NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "blender",            NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Blender",            NULL,     "Blender Preferences", 0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "Blender",            NULL,     "Render",              0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "blender",            NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "blender",            NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "blender",            NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "blender",            NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "blender",            NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "blender",            NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Maya */
-	{ "Maya",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         -1 },
-	{ "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Maya",               NULL,     "Script Editor",       0,         1,         1400, 900,   1,          0,          1,         -1 },
-	{ "Maya",               NULL,     "Edit Layer",          0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Maya",               NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Maya",               NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Maya",               NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Maya",               NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Maya",               NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "__main__.py",        "__main__.py", "Pyblish",        0,         1,          -1, -1,     1,          0,          1,         -1 },
-	{ "Maya",               NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Maya",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          0,         -1 },
+	{ "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "Maya",               NULL,     "Script Editor",       0,         1,         1400, 900,   1,          0,          0,         -1 },
+	{ "Maya",               NULL,     "Edit Layer",          0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "Maya",               NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "Maya",               NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "Maya",               NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "Maya",               NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "Maya",               NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "__main__.py",        "__main__.py", "Pyblish",        0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "Maya",               NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Bluetooth manager */
 	{ "Blueman-manager",    NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Steam */
@@ -102,6 +102,10 @@ static const Rule rules[] = {
 	{ "ProtonMail Bridge",  "protonmail-bridge", NULL,       0,         1,          785,  530,  1,          0,          0,         -1 },
 	/* Syncthing */
 	{ "Syncthing GTK",      NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
+	/* Swallow */
+	{ "Zathura",            NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         -1 },
+	{ "libreoffice",        NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         -1 },
+	{ "Sxiv",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         -1 },
 };
 
 /* layout(s) */

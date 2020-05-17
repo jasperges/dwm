@@ -104,7 +104,7 @@ struct Client {
 	int basew, baseh, incw, inch, maxw, maxh, minw, minh;
 	int bw, oldbw;
 	unsigned int tags;
-	int isfixed, iscentered, isfloating, isurgent, neverfocus, oldstate, isfullscreen, isterminal, noswallow;
+	int isfixed, iscentered, isfloating, isurgent, neverfocus, oldstate, isfullscreen, isterminal, doswallow;
 	pid_t pid;
 	Client *next;
 	Client *snext;
@@ -166,7 +166,7 @@ typedef struct {
 	int floatw, floath;
 	int isfloating;
 	int isterminal;
-	int noswallow;
+	int doswallow;
 	int monitor;
 } Rule;
 
@@ -375,7 +375,7 @@ applyrules(Client *c)
 		&& (!r->instance || strstr(instance, r->instance)))
 		{
 			c->isterminal = r->isterminal;
-			c->noswallow = r->noswallow;
+			c->doswallow = r->doswallow;
 			c->iscentered = r->iscentered;
 			c->isfloating = r->isfloating;
 			c->tags |= r->tags;
@@ -524,7 +524,7 @@ attachstack(Client *c)
 void
 swallow(Client *p, Client *c)
 {
-	if (c->noswallow || c->isterminal)
+	if (!c->doswallow || c->isterminal)
 		return;
 
 	detach(c);
