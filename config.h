@@ -73,7 +73,7 @@ static const Rule rules[] = {
 	{ "Thunar",             NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Pcmanfm",            NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	 /* Blender */
-	{ "Blender",            NULL,     "Preferences",         0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "Blender",            NULL,     "Blender Preferences", 0,         1,          -1, -1,     1,          0,          1,         -1 },
 	{ "Blender",            NULL,     "Render",              0,         1,          -1, -1,     1,          0,          1,         -1 },
 	{ "blender",            NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          1,         -1 },
 	{ "blender",            NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          1,         -1 },
@@ -85,11 +85,13 @@ static const Rule rules[] = {
 	{ "Maya",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         -1 },
 	{ "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          1,         -1 },
 	{ "Maya",               NULL,     "Script Editor",       0,         1,         1400, 900,   1,          0,          1,         -1 },
+	{ "Maya",               NULL,     "Edit Layer",          0,         1,          -1, -1,     1,          0,          1,         -1 },
 	{ "Maya",               NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          1,         -1 },
 	{ "Maya",               NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          1,         -1 },
 	{ "Maya",               NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          1,         -1 },
 	{ "Maya",               NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          1,         -1 },
 	{ "Maya",               NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          1,         -1 },
+	{ "__main__.py",        "__main__.py", "Pyblish",        0,         1,          -1, -1,     1,          0,          1,         -1 },
 	{ "Maya",               NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          1,         -1 },
 	/* Bluetooth manager */
 	{ "Blueman-manager",    NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
