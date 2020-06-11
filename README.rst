@@ -79,6 +79,8 @@ applied:
         any child process, e.g. running xclock in a terminal
       - closing the xclock window restores the terminal window in the current
         position
+      - *changed*: instead of configuring which windows should **not** be
+        swallowed, configure which windows **should** be swallowed
 
    - `actualfullscreen <https://dwm.suckless.org/patches/actualfullscreen/>`_
       - actually toggle fullscreen for a window, instead of toggling the status
@@ -160,3 +162,8 @@ applied:
       - the dwmblocks-statuscmd patch makes dwmblocks put each block's signal in
         front of its output text and handles the SIGUSR1 signal by running the
         block's command with $BUTTON exported
+
+   - `warp <https://dwm.suckless.org/patches/warp/>`_
+      - this patch warps the mouse cursor to the center of the currently focused
+        window or screen when the mouse cursor is (a) on a different screen or
+        (b) on top of a different window
