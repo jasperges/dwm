@@ -100,6 +100,8 @@ static const Rule rules[] = {
 	{ "Steam",              NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Bash/Htop */
 	{ "alacritty",          NULL,     "centered",            0,         1,          1400, 900,  1,          0,          0,         -1 },
+	/* Float */
+	{ "pdfmerge_qt",        NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "ProtonMail Bridge",  "protonmail-bridge", NULL,       0,         1,          785,  530,  1,          0,          0,         -1 },
 	/* Syncthing */
 	{ "Syncthing GTK",      NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
