@@ -68,6 +68,7 @@ static const Rule rules[] = {
 	{ "alacritty",          NULL,     "pinentry",            0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Avalon/Allzpark */
 	{ "__main__.py",        NULL,     "Submarine Launcher",  0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "cli.py",             NULL,     "Torpedo",             0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Shotgun */
 	{ "Shotgun",            NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* File managers */
