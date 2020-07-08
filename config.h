@@ -86,7 +86,7 @@ static const Rule rules[] = {
 	/* Maya */
 	{ "Maya",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          0,         -1 },
 	{ "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "Maya",               NULL,     "Script Editor",       0,         1,         1400, 900,   1,          0,          0,         -1 },
+	{ "Maya",               NULL,     "Script Editor",       0,         1,        1400, 900,    1,          0,          0,         -1 },
 	{ "Maya",               NULL,     "Edit Layer",          0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Maya",               NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Maya",               NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          0,         -1 },
@@ -100,10 +100,11 @@ static const Rule rules[] = {
 	/* Steam */
 	{ "Steam",              NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Bash/Htop */
-	{ "alacritty",          NULL,     "centered",            0,         1,          1400, 900,  1,          0,          0,         -1 },
+	{ "alacritty",          NULL,     "centered",            0,         1,        1400, 900,    1,          0,          0,         -1 },
 	/* Float */
+	{ "Dwarf_Fortress",     NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "pdfmerge_qt",        NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "ProtonMail Bridge",  "protonmail-bridge", NULL,       0,         1,          785,  530,  1,          0,          0,         -1 },
+	{ "ProtonMail Bridge",  "protonmail-bridge", NULL,       0,         1,         785, 530,    1,          0,          0,         -1 },
 	/* Syncthing */
 	{ "Syncthing GTK",      NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Swallow */
