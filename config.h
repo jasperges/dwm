@@ -128,6 +128,8 @@ static const Layout layouts[] = {
 	{ "[M]",      monocle },
 	{ "TTT",      bstack },
 	{ "===",      bstackhoriz },
+	{ "|M|",      centeredmaster },
+	{ ">M>",      centeredfloatingmaster },
 };
 
 /* key definitions */
@@ -185,6 +187,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_m,      setlayout,         {.v = &layouts[2]} },
 	{ MODKEY,                       XK_e,      setlayout,         {.v = &layouts[3]} }, // bstack layout
 	{ MODKEY,                       XK_r,      setlayout,         {.v = &layouts[4]} }, // bstackhoriz layout
+	{ MODKEY,                       XK_u,      setlayout,         {.v = &layouts[5]} }, // centered master
+	{ MODKEY|ShiftMask,             XK_u,      setlayout,         {.v = &layouts[6]} }, // centered floating master
 	{ MODKEY|ControlMask,           XK_space,  setlayout,         {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating,    {0} },
 	{ MODKEY,                       XK_f,      togglefullscr,     {0} },
