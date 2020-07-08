@@ -167,3 +167,6 @@ applied:
       - this patch warps the mouse cursor to the center of the currently focused
         window or screen when the mouse cursor is (a) on a different screen or
         (b) on top of a different window
+
+   - `centeredmaster <https://dwm.suckless.org/patches/centeredmaster/>`_
+      - centeredmaster and centeredfloatingmaster are two stack layouts for dwm
