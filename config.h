@@ -58,7 +58,7 @@ static const Rule rules[] = {
 	{ "TelegramDesktop",    NULL,     "Media viewer",        0,         0,          -1, -1,     0,          0,          0,         -1 },
 	{ "Rambox",             NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "Franz",              NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
-	{ "Spotify",            NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
+	{ "Spotify",            NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,         -1 },
 	{ "st",                 NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          0,         -1 },
 	{ "alacritty",          NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          0,         -1 },
 	{ "Blender",            NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          0,         -1 },
