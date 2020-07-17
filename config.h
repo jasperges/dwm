@@ -52,6 +52,7 @@ static const Rule rules[] = {
 	{ "krita",              NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Gimp",               NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Firefox",            NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,          0 },
+	{ "Badwolf",            NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,          0 },
 	{ "Mattermost",         NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "TelegramDesktop",    NULL,     "Telegram",            1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "TelegramDesktop",    NULL,     "Media viewer",        0,         0,          -1, -1,     0,          0,          0,         -1 },
@@ -66,9 +67,9 @@ static const Rule rules[] = {
 	{ "mpv",                NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Terminal pinentry */
 	{ "alacritty",          NULL,     "pinentry",            0,         1,          -1, -1,     1,          0,          0,         -1 },
-	/* Avalon/Allzpark */
-	{ "__main__.py",        NULL,     "Submarine Launcher",  0,         1,          -1, -1,     1,          0,          0,         -1 },
+	/* Avalon/Allzpark/Torpedo */
 	{ "cli.py",             NULL,     "Torpedo",             0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "cli.py",             NULL,     "Project",             0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Shotgun */
 	{ "Shotgun",            NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* File managers */
