@@ -106,6 +106,7 @@ static const Rule rules[] = {
 	{ "Dwarf_Fortress",     NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "pdfmerge_qt",        NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "ProtonMail Bridge",  "protonmail-bridge", NULL,       0,         1,         785, 530,    1,          0,          0,         -1 },
+	{ "__main__.py",        NULL,     "GazUser",             0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Syncthing */
 	{ "Syncthing GTK",      NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Swallow */
