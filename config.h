@@ -66,6 +66,7 @@ static const Rule rules[] = {
 	/* Make apps floating */
 	/* Movie player */
 	{ "mpv",                NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "djv",                NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Terminal pinentry */
 	{ "alacritty",          NULL,     "pinentry",            0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Avalon/Allzpark/Torpedo */
