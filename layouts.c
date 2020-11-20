@@ -277,12 +277,12 @@ centeredmaster(Monitor *m)
 		/* go mfact box in the center if more than nmaster clients */
 		if (n - m->nmaster > 1) {
 			/* ||<-S->|<---M--->|<-S->|| */
-			mw = (m->ww - 2*ov - 2*iv) * m->mfact * 0.8;
+			mw = (m->ww - 2*ov - 2*iv) * m->mfact * 0.85;
 			lw = (m->ww - mw - 2*ov - 2*iv) / 2;
 			mx += lw + iv;
 		} else {
 			/* ||<---M--->|<-S->|| */
-			mw = (mw - iv) * m->mfact * 0.8;
+			mw = (mw - iv) * m->mfact * 0.85;
 			lw = m->ww - mw - iv - 2*ov;
 		}
 		rw = lw;
