@@ -2366,8 +2366,6 @@ unfocus(Client *c, int setfocus)
 {
 	if (!c)
 		return;
-	if (c->isfullscreen && ISVISIBLE(c))
-		setfullscreen(c, 0);
 	grabbuttons(c, 0);
 	XSetWindowBorder(dpy, c->win, scheme[SchemeNorm][ColBorder].pixel);
 	if (setfocus) {
