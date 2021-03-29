@@ -60,9 +60,16 @@ static const Rule rules[] = {
 	{ "Franz",              NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "Signal",             NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "Spotify",            NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,         -1 },
+	/* Deadline Monitor -> workspace 7 */
+	{ NULL,                 NULL,     "Deadline Monitor",    0 << 6,    0,          -1, -1,     0,          0,          0,          0 },
+	/* Blender -> workspace 2 */
+	{ "Blender",            NULL,     NULL,                  0 << 1,    0,          -1, -1,     0,          0,          0,          0 },
+	/* Conferencing apps -> workspace 8 */
+	{ "Jitsi Meet",         NULL,     NULL,                  0 << 7,    0,          -1, -1,     0,          0,          0,          0 },
+	{ "zoom",               NULL,     NULL,                  0 << 7,    0,          -1, -1,     0,          0,          0,          0 },
+	/* Terminals */
 	{ "st",                 NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          0,         -1 },
 	{ "alacritty",          NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          0,         -1 },
-	{ "Blender",            NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          0,         -1 },
 	/* Make apps floating */
 	/* Movie player */
 	{ "mpv",                NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
