@@ -589,7 +589,7 @@ buttonpress(XEvent *e)
 			arg.ui = 1 << i;
 		} else if (ev->x < x + blw)
 			click = ClkLtSymbol;
-		else if (ev->x > (x = selmon->ww - TEXTW(stext) + lrpad - 14)) {
+		else if (ev->x > (x = selmon->ww - (int)TEXTW(stext) + lrpad - 14)) {
 			click = ClkStatusText;
 
 			char *text = rawstext;
@@ -1057,7 +1057,7 @@ focusstack(const Arg *arg)
 	int i = stackpos(arg);
 	Client *c, *p;
 
-	if(i< 0)
+	if (i < 0 || !selmon->sel || selmon->sel->isfullscreen)
 		return;
 
 	for(p = NULL, c = selmon->clients; c && (i || !ISVISIBLE(c));
