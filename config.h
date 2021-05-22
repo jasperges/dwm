@@ -96,9 +96,9 @@ static const Rule rules[] = {
 	{ "blender",            NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Maya */
 	{ "Maya",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          0,         -1 },
-	{ "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "Maya",               NULL,     "Script Editor",       0,         1,        1400, 900,    1,          0,          0,         -1 },
-	{ "Maya",               NULL,     "Edit Layer",          0,         1,          -1, -1,     1,          0,          0,         -1 },
+	/* { "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          0,         -1 }, */
+	/* { "Maya",               NULL,     "Script Editor",       0,         1,        1400, 900,    1,          0,          0,         -1 }, */
+	/* { "Maya",               NULL,     "Edit Layer",          0,         1,          -1, -1,     1,          0,          0,         -1 }, */
 	{ "Maya",               NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Maya",               NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Maya",               NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          0,         -1 },
