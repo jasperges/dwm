@@ -39,7 +39,7 @@ static const unsigned int alphas[][3]      = {
 #define MAX_TAGNAME_LEN 14      /* excludes TAG_PREPEND */
 #define TAG_PREPEND "%1i:"      /* formatted as 2 chars */
 #define MAX_TAGLEN 16           /* altogether */
-static char tags[][MAX_TAGLEN] = { "", "", "", "4", "5", "6", "", "", "" };
+static char tags[][MAX_TAGLEN] = { "", "", "", "", "5", "6", "", "", "" };
 /* static char tags[][MAX_TAGLEN] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; */
 /* static const char *tags[] = { "", "", "", "", "", "", "", "", "" }; */
 
@@ -55,25 +55,26 @@ static const Rule rules[] = {
 	{ "Badwolf",            NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,          0 },
 	{ "Mattermost",         NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "TelegramDesktop",    NULL,     "Telegram",            1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
-	{ "TelegramDesktop",    NULL,     "Media viewer",        0,         0,          -1, -1,     0,          0,          0,         -1 },
+	{ "TelegramDesktop",    NULL,     "Media viewer",        0,         0,          -1, -1,     1,          0,          0,         -1 },
 	{ "Rambox",             NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "Franz",              NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "Signal",             NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
-	{ "Spotify",            NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,         -1 },
+	{ "Spotify",            NULL,     "Spotify",             1 << 6,    0,          -1, -1,     0,          0,          0,          1 },
 	/* Deadline Monitor -> workspace 7 */
-	{ NULL,                 NULL,     "Deadline Monitor",    0 << 6,    0,          -1, -1,     0,          0,          0,          0 },
-	/* Blender -> workspace 2 */
-	{ "Blender",            NULL,     NULL,                  0 << 1,    0,          -1, -1,     0,          0,          0,          0 },
+	{ NULL,                 NULL,     "Deadline Monitor",    1 << 6,    0,          -1, -1,     0,          0,          0,          0 },
+	/* Blender -> workspace 4 */
+	{ "Blender",            NULL,     NULL,                  1 << 3,    0,          -1, -1,     0,          0,          0,          0 },
 	/* Conferencing apps -> workspace 8 */
-	{ "Jitsi Meet",         NULL,     NULL,                  0 << 7,    0,          -1, -1,     0,          0,          0,          0 },
-	{ "zoom",               NULL,     NULL,                  0 << 7,    0,          -1, -1,     0,          0,          0,          0 },
+	{ "Jitsi Meet",         NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          0 },
+	{ "zoom",               NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          0 },
+	{ "Droidcam",           NULL,     NULL,                  1 << 7,    0,			-1, -1,     0,          0,          0,          0 },
+	{ "Pavucontrol",        NULL,     NULL,                  1 << 7,    0,			-1, -1,     0,          0,          0,          0 },
 	/* Terminals */
 	{ "st",                 NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          0,         -1 },
 	{ "alacritty",          NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          0,         -1 },
 	/* Make apps floating */
 	/* Movie player */
 	{ "mpv",                NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ NULL,                 NULL,     "MPlayer",             0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "djv",                NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Terminal pinentry */
 	{ "alacritty",          NULL,     "pinentry",            0,         1,          -1, -1,     1,          0,          0,         -1 },
@@ -96,9 +97,9 @@ static const Rule rules[] = {
 	{ "blender",            NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Maya */
 	{ "Maya",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          0,         -1 },
-	/* { "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          0,         -1 }, */
-	/* { "Maya",               NULL,     "Script Editor",       0,         1,        1400, 900,    1,          0,          0,         -1 }, */
-	/* { "Maya",               NULL,     "Edit Layer",          0,         1,          -1, -1,     1,          0,          0,         -1 }, */
+	{ "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          0,         -1 },
+	{ "Maya",               NULL,     "Script Editor",       0,         1,        1400, 900,    1,          0,          0,         -1 },
+	{ "Maya",               NULL,     "Edit Layer",          0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Maya",               NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Maya",               NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Maya",               NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          0,         -1 },
