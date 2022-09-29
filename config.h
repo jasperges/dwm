@@ -39,7 +39,7 @@ static const unsigned int alphas[][3]      = {
 #define MAX_TAGNAME_LEN 14      /* excludes TAG_PREPEND */
 #define TAG_PREPEND "%1i:"      /* formatted as 2 chars */
 #define MAX_TAGLEN 16           /* altogether */
-static char tags[][MAX_TAGLEN] = { "", "", "", "", "5", "6", "", "", "" };
+static char tags[][MAX_TAGLEN] = { "", "", "", "4", "5", "", "🎶", "", "" };
 /* static char tags[][MAX_TAGLEN] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; */
 /* static const char *tags[] = { "", "", "", "", "", "", "", "", "" }; */
 
@@ -51,26 +51,23 @@ static const Rule rules[] = {
 	/* class                instance  title                  tags mask  iscentered  float w, h  isfloating  isterminal  doswallow  monitor */
 	{ "krita",              NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Gimp",               NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "Firefox",            NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,          0 },
+	{ "Thunderbird",        NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,          0 },
+	{ "firefox",            NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,          0 },
 	{ "Badwolf",            NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,          0 },
 	{ "Mattermost",         NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "TelegramDesktop",    NULL,     "Telegram",            1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "TelegramDesktop",    NULL,     "Media viewer",        0,         0,          -1, -1,     1,          0,          0,         -1 },
-	{ "Rambox",             NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
-	{ "Franz",              NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
+	{ "Slack",              NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
+	{ "Ferdium",            NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "Signal",             NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
 	{ "Spotify",            NULL,     "Spotify",             1 << 6,    0,          -1, -1,     0,          0,          0,          1 },
-	/* Deadline Monitor -> workspace 7 */
-	{ NULL,                 NULL,     "Deadline Monitor",    1 << 6,    0,          -1, -1,     0,          0,          0,          0 },
-	/* Blender -> workspace 4 */
-	{ "Blender",            NULL,     NULL,                  1 << 3,    0,          -1, -1,     0,          0,          0,          0 },
+	/* Blender -> workspace 7 */
+	{ "Blender",            NULL,     NULL,                  1 << 5,    0,          -1, -1,     0,          0,          0,          0 },
 	/* Conferencing apps -> workspace 8 */
 	{ "Jitsi Meet",         NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          0 },
 	{ "zoom",               NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          0 },
-	{ "Droidcam",           NULL,     NULL,                  1 << 7,    0,			-1, -1,     0,          0,          0,          0 },
 	{ "Pavucontrol",        NULL,     NULL,                  1 << 7,    0,			-1, -1,     0,          0,          0,          0 },
 	/* Terminals */
-	{ "st",                 NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          0,         -1 },
 	{ "alacritty",          NULL,     NULL,                  0,         0,          -1, -1,     0,          1,          0,         -1 },
 	/* Make apps floating */
 	/* Movie player */
@@ -78,35 +75,11 @@ static const Rule rules[] = {
 	{ "djv",                NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Terminal pinentry */
 	{ "alacritty",          NULL,     "pinentry",            0,         1,          -1, -1,     1,          0,          0,         -1 },
-	/* Avalon/Allzpark/Torpedo */
-	{ "cli.py",             NULL,     "Torpedo",             0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "cli.py",             NULL,     "Project",             0,         1,          -1, -1,     1,          0,          0,         -1 },
-	/* Shotgun */
-	{ "Shotgun",            NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* File managers */
-	{ "Thunar",             NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Pcmanfm",            NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	 /* Blender */
 	{ "Blender",            NULL,     "Blender Preferences", 0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "Blender",            NULL,     "Render",              0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "blender",            NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "blender",            NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "blender",            NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "blender",            NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "blender",            NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "blender",            NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          0,         -1 },
-	/* Maya */
-	{ "Maya",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          0,         -1 },
-	{ "Maya",               NULL,     "JJM Playblast",       0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "Maya",               NULL,     "Script Editor",       0,         1,        1400, 900,    1,          0,          0,         -1 },
-	{ "Maya",               NULL,     "Edit Layer",          0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "Maya",               NULL,     "Work Files",          0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "Maya",               NULL,     "Context Manager",     0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "Maya",               NULL,     "Instance Creator",    0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "Maya",               NULL,     "Asset Loader",        0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "Maya",               NULL,     "Pyblish",             0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "__main__.py",        "__main__.py", "Pyblish",        0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "Maya",               NULL,     "Scene Inventory",     0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Bluetooth manager */
 	{ "Blueman-manager",    NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Steam */
@@ -114,10 +87,7 @@ static const Rule rules[] = {
 	/* Bash/Htop */
 	{ "alacritty",          NULL,     "centered",            0,         1,        1400, 900,    1,          0,          0,         -1 },
 	/* Float */
-	{ "Dwarf_Fortress",     NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "pdfmerge_qt",        NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	{ "ProtonMail Bridge",  "protonmail-bridge", NULL,       0,         1,         785, 530,    1,          0,          0,         -1 },
-	{ "__main__.py",        NULL,     "GazUser",             0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Syncthing */
 	{ "Syncthing GTK",      NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Swallow */
