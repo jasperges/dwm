@@ -39,7 +39,7 @@ static const unsigned int alphas[][3]      = {
 #define MAX_TAGNAME_LEN 14      /* excludes TAG_PREPEND */
 #define TAG_PREPEND "%1i:"      /* formatted as 2 chars */
 #define MAX_TAGLEN 16           /* altogether */
-static char tags[][MAX_TAGLEN] = { "", "", "", "4", "5", "", "🎶", "", "" };
+static char tags[][MAX_TAGLEN] = { "", "", "", "", "5", "", "🎶", "", "" };
 /* static char tags[][MAX_TAGLEN] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }; */
 /* static const char *tags[] = { "", "", "", "", "", "", "", "", "" }; */
 
@@ -54,14 +54,14 @@ static const Rule rules[] = {
 	{ "Thunderbird",        NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,          0 },
 	{ "firefox",            NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,          0 },
 	{ "Badwolf",            NULL,     NULL,                  1 << 8,    0,          -1, -1,     0,          0,          0,          0 },
-	{ "Mattermost",         NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
-	{ "TelegramDesktop",    NULL,     "Telegram",            1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
+	{ "Mattermost",         NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          2 },
+	{ "TelegramDesktop",    NULL,     "Telegram",            1 << 7,    0,          -1, -1,     0,          0,          0,          2 },
 	{ "TelegramDesktop",    NULL,     "Media viewer",        0,         0,          -1, -1,     1,          0,          0,         -1 },
-	{ "Slack",              NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
-	{ "Ferdium",            NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
-	{ "Signal",             NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          1 },
-	{ "Spotify",            NULL,     "Spotify",             1 << 6,    0,          -1, -1,     0,          0,          0,          1 },
-	/* Blender -> workspace 7 */
+	{ "Slack",              NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          2 },
+	{ "Ferdium",            NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          2 },
+	{ "Signal",             NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          2 },
+	{ "Spotify",            NULL,     "Spotify",             1 << 6,    0,          -1, -1,     0,          0,          0,          2 },
+	/* Blender -> workspace 6 */
 	{ "Blender",            NULL,     NULL,                  1 << 5,    0,          -1, -1,     0,          0,          0,          0 },
 	/* Conferencing apps -> workspace 8 */
 	{ "Jitsi Meet",         NULL,     NULL,                  1 << 7,    0,          -1, -1,     0,          0,          0,          0 },
@@ -72,7 +72,6 @@ static const Rule rules[] = {
 	/* Make apps floating */
 	/* Movie player */
 	{ "mpv",                NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
-	{ "djv",                NULL,     NULL,                  0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* Terminal pinentry */
 	{ "alacritty",          NULL,     "pinentry",            0,         1,          -1, -1,     1,          0,          0,         -1 },
 	/* File managers */
@@ -94,6 +93,8 @@ static const Rule rules[] = {
 	{ "Zathura",            NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         -1 },
 	{ "libreoffice",        NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         -1 },
 	{ "Sxiv",               NULL,     NULL,                  0,         0,          -1, -1,     0,          0,          1,         -1 },
+	/* Remote desktop */
+	{ "Wfica",              NULL,     NULL,                  1 << 3,    0,          -1, -1,     0,          0,          0,         -1 },
 };
 
 /* layout(s) */
